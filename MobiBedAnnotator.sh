@@ -13,7 +13,7 @@ USAGE="
 MobiBedAnnotator.sh: script to annotate a BED file for NGS experiments. requires bedtools to be installed
 ---
 
-sh MobiBedAnnotator.sh -b /path/to/ROI.bed
+sh MobiBedAnnotator.sh -r /path/to/ROI.bed
 
 Arguments:
 
