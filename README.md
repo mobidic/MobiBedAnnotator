@@ -1,8 +1,8 @@
 # MobiBedAnnotator
 This script will annotate a BED file with refSeq NM and exons positions
 
+Requires bedtools to be installed
 
-MobiBedAnnotator.sh: script to annotate a BED file for NGS experiments. Requires bedtools to be installed
 ```
 sh MobiBedAnnotator.sh -r /path/to/ROI.bed
 ```
