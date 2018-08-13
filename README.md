@@ -14,3 +14,4 @@ Options:
 	
 	-m, 	--master-bed:		Path to the provided master.bed file which contains annotations for all coding HGNC genes (05/2018). Default cwd.
 	-b,	--bedtools-path:	Path to bedtools executables. Mandatory if bedtools not in path, optional otherwise
+	-o, 	--output:		Desired name for the annotated output bed
