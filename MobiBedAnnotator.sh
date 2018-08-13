@@ -85,7 +85,7 @@ if [[ -e ${BEDTOOLS} && -e ${ROI_PATH} && -e ${MASTER_PATH} ]];then
 	sort -k1,1 -k2,2n | \
 	${BEDTOOLS} merge -i - -c 4 -o collapse > "${OUTPUT}"
 	
-	# rm "tmp_annotated_merged_${ROI_FILE}" "tmp_not_annotated_${ROI_FILE}"
+	rm "tmp_annotated_merged_${ROI_FILE}" "tmp_not_annotated_${ROI_FILE}"
 else
 	echo "${USAGE}"
 	echo "One condiion is not fullfilled"
