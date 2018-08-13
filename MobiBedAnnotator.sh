@@ -11,7 +11,10 @@ USAGE="
 ---
 MobiBedAnnotator.sh: script to annotate a BED file for NGS experiments. requires bedtools to be installed
 ---
-sh MobiBedAnnotator.sh -r /path/to/ROI.bed
+
+sh MobiBedAnnotator.sh -r /path/to/ROI.bed -m /path/to/bed/to/annotate -o /path/to/output.bed
+=======
+
 Arguments:
 	-r, 	--roi-bed:		Your ROI BED file to be annotated. Must contain 4 columns.
 	
@@ -19,6 +22,7 @@ Options:
 	
 	-m, 	--master-bed:		Path to the provided master.bed file which contains annotations for all coding HGNC genes (05/2018). Default cwd.
 	-b,	--bedtools-path:	Path to bedtools executables. Mandatory if bedtools not in path, optional otherwise
+	-o, --output:	Desired name for the annotated output bed
 "
 if [ "$#" -eq 0 ]; then
 	echo "${USAGE}"
@@ -29,7 +33,7 @@ fi
 
 
 
-# MASTER_PATH=master.bed
+MASTER_PATH=master.bed
 BEDTOOLS=$(command -v bedtools)
 
 while [[ "$#" -gt 0 ]]
